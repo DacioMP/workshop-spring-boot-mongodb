@@ -37,7 +37,11 @@ public class Instantiation implements CommandLineRunner {
 		Post post1 = new Post(null, Instant.parse("2024-07-24T12:53:07Z"), "Partiu viagem", "Vou viajar para São Paulo. Abraços!", new AuthorDTO(matheus));
 		Post post2 = new Post(null, Instant.parse("2024-08-02T12:53:07Z"), "Bom dia", "Acordei feliz hoje!", new AuthorDTO(matheus));
 		
-		postRepository.saveAll(Arrays.asList(post1, post2));	
+		postRepository.saveAll(Arrays.asList(post1, post2));
+		
+		matheus.getPosts().addAll(Arrays.asList(post1, post2));
+		
+		userRepository.save(matheus);
 	}
 
 }
