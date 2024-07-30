@@ -1,6 +1,6 @@
 package com.pedrosa.workshopmongo.config;
 
-import java.time.Instant;
+import java.time.LocalDate;
 import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,12 +35,12 @@ public class Instantiation implements CommandLineRunner {
 		
 		userRepository.saveAll(Arrays.asList(matheus, alex, bob));
 		
-		Post post1 = new Post(null, Instant.parse("2024-07-24T12:53:07Z"), "Partiu viagem", "Vou viajar para São Paulo. Abraços!", new AuthorDTO(matheus));
-		Post post2 = new Post(null, Instant.parse("2024-08-02T12:53:07Z"), "Bom dia", "Acordei feliz hoje!", new AuthorDTO(matheus));
+		Post post1 = new Post(null, LocalDate.parse("2024-07-24"), "Partiu viagem", "Vou viajar para São Paulo. Abraços!", new AuthorDTO(matheus));
+		Post post2 = new Post(null, LocalDate.parse("2024-08-02"), "Bom dia", "Acordei feliz hoje!", new AuthorDTO(matheus));
 		
-		CommentDTO c1 = new CommentDTO("Boa viagem mano!", Instant.parse("2024-07-24T13:45:07Z"), new AuthorDTO(alex));
-		CommentDTO c2 = new CommentDTO("Aproveite!", Instant.parse("2024-07-24T13:53:07Z"), new AuthorDTO(bob));
-		CommentDTO c3 = new CommentDTO("Tenha um ótimo dia!", Instant.parse("2024-07-25T08:25:07Z"), new AuthorDTO(alex));
+		CommentDTO c1 = new CommentDTO("Boa viagem mano!", LocalDate.parse("2024-07-25"), new AuthorDTO(alex));
+		CommentDTO c2 = new CommentDTO("Aproveite!", LocalDate.parse("2024-07-27"), new AuthorDTO(bob));
+		CommentDTO c3 = new CommentDTO("Tenha um ótimo dia!", LocalDate.parse("2024-08-05"), new AuthorDTO(alex));
 		
 		post1.getComments().addAll(Arrays.asList(c1, c2));
 		post2.getComments().addAll(Arrays.asList(c3));
