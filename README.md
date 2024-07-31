@@ -1,8 +1,8 @@
-# API RESTful com Spring Boot e MongoDB
+# MyPost
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/DacioMP/workshop-spring-boot-mongodb/blob/main/LICENSE)
 
 # Sobre o projeto
-A aplicação API RESTful com Spring Boot e banco MongoDB foi desenvolvida durante o curso **Programação Orientada a Objetos com Java**, ministrado pelo professor Nélio Alves.
+O MyPost é uma API RESTful desenvolvida utilizando-se Spring Boot e o banco MongoDB. A aplicação foi criada durante o curso **Programação Orientada a Objetos com Java**, ministrado pelo professor Nélio Alves.
 
 O projeto simula um sistema de publicação de posts de uma rede social, relacionando usuários, posts e comentários.
 
